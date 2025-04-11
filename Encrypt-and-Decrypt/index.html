@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Cryptography Encryptor and Decryptor</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+	<h1>
+		Encrypt and attempt to decrypt messages.
+	</h1>
+</head>
+
+<body>
+	<form>
+  <input type="radio" id="Encrypt" name="action" value="Encrypt" checked onclick="showencryptoptions();">
+  <label for="Encrypt">Encrypt</label><br>
+  <input type="radio" id="Decrypt" name="action" value="Decrypt" onclick = "showdecryptoptions();">
+  <label for="css">Decrypt</label><br>
+</form> 
+
+	
+	<div id= "encrypt_options" style= "display:'block'">
+
+		<label for="method">Choose an encyption method:</label>
+
+		<select name="method" id="method">
+		  <option value="Ceaser_cypher">Ceaser cypher</option>
+		  <option value="Picket_fence">Picket fence</option>
+		  <option value="Random_substitution">Random substitution</option>
+		  <option value="Greek_square">Greek square</option>
+		</select>
+		
+	</div>
+	
+	<div id="decrypt_options" style = "display:none;">
+		<p>
+			Paste the message you want to decrypt below.
+		</p>
+		
+	</div>
+	
+  <textarea id = "message" placeholder="The message" oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'></textarea>
+<br>
+  <button onclick = "execute()">
+	  Go
+  </button>
+
+	<br>
+	<br>
+	<textarea id = "output" style="display: none;" onfocus='this.style.height = "";this.style.height = this.scrollHeight + "px"'></textarea>
+</body>
+
+	<script src = "page_handling.js"></script>
+	<script src = "encrypt.js"></script>
+	<script src = "decrypt.js"></script>
+	
+</html>

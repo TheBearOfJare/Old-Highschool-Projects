@@ -1,0 +1,21 @@
+html {
+  	height: 100%;
+  	width: 100%;
+	background-color: black;
+	color: white;
+}
+
+h1{
+	color:white
+}
+h2 {
+	color: white
+}
+
+textarea {
+	color: black;
+	width: 100%;
+	height: fit-content;
+	
+}
+
